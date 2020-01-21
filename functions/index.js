@@ -4,12 +4,30 @@ const app = express()
 
 exports.httpReq = functions.https.onRequest(app)
 
-app.get('/', requestHandler);
+app.get('/', frontendHandler);
 
-app.get('/home', requestHandler);
+app.get('/b', backendHandler);
 
-app.get('/login', requestHandler);
+app.get('/home', frontendHandler);
 
-function requestHandler(request, response){
+app.get('/login', frontendHandler);
+
+function frontendHandler(request, response){
     response.sendFile(__dirname + '/spa/index.html')
+}
+
+function backendHandler(req, res){
+    const n = Math.random()// 0~1 (not including 1)
+    const num = Math.floor(n * 10)//0~9 int
+    let s = 0;
+    s = 50 + 12;
+
+    //string template
+    let page = `
+        <h1>Your lucky number is ${num}</h1>
+        Sum is ${s}
+    `;
+    
+
+    res.send(page)
 }
