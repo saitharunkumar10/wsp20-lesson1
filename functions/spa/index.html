@@ -13,18 +13,21 @@
   <body>
     <h1>This is my company heading</h1>
     <div id="content"></div>
+    
+    <script src="js/login_page.js"></script>
 
     <script>
-      window.onload = function(){
+        const pageContent = document.getElementById("content")
+
+        window.onload = function(){
         const currentPath = window.location.pathname
         console.log('current path =', currentPath)
-        const pageContent = document.getElementById("content")
         if (currentPath === '/') {
           pageContent.innerHTML = "<h1>Root page</h1>"
         }else if (currentPath === '/home') {
           pageContent.innerHTML = "<h1>Home page</h1>"
         }else if (currentPath === '/login') {
-          pageContent.innerHTML = "<h1>Login page</h1>"
+          login_page()
         }
       }
     </script>

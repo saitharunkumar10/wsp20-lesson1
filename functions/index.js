@@ -1,6 +1,7 @@
 const functions = require('firebase-functions');
 const express = require('express')
 const app = express()
+const path = require('path')
 
 exports.httpReq = functions.https.onRequest(app)
 
@@ -13,7 +14,7 @@ app.get('/home', frontendHandler);
 app.get('/login', frontendHandler);
 
 function frontendHandler(request, response){
-    response.sendFile(__dirname + '/spa/index.html')
+    response.sendFile(path.join(__dirname, '/spa/index.html'))
 }
 
 function backendHandler(req, res){
