@@ -8,13 +8,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>My company</title>
+    <title>This is my Page</title>
   </head>
-  <body>
-    <h1>This is my company heading</h1>
+  <body background="http://timberlakeconstruction.com/images/projects/113/uco-sb-4717-010_resized-w2400h0.jpg">
+    <h1></h1>
     <div id="content"></div>
     
     <script src="js/login_page.js"></script>
+    <script src="js/new_page.js"></script>
+    <script src="js/pictures.js"></script>
 
     <script>
         const pageContent = document.getElementById("content")
@@ -28,6 +30,10 @@
           pageContent.innerHTML = "<h1>Home page</h1>"
         }else if (currentPath === '/login') {
           login_page()
+        }else if (currentPath === '/newpage') {
+          new_page()
+        }else if (currentPath === '/pictures') {
+          pictures()
         }
       }
     </script>

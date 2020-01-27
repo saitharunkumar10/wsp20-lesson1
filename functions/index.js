@@ -12,6 +12,7 @@ app.get('/b', backendHandler);
 app.get('/home', frontendHandler);
 
 app.get('/login', frontendHandler);
+app.get('/newpage', frontendHandler);
 
 function frontendHandler(request, response){
     response.sendFile(path.join(__dirname, '/spa/index.html'))
