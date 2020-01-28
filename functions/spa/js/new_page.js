@@ -22,15 +22,12 @@ function new_page(){
           <li class="active"><a href="https://www.uco.edu/cms/academics/computer-science/">CS Dept</a></li>
           <li class="dropdown"><a  data-toggle="dropdown" href="#">My Profile
             <ul class="dropdown-menu">
-              <li><a ref="myFunction()">Page email</a></li>
-              <li><a href="#">Page photos</a></li>
-              <li><a href="#">Page 1-3</a></li>
+              <li><a href="https://centralauth.uco.edu/cas/login?service=https%3A%2F%2Fuconnect.uco.edu%2Fc%2Fportal%2Flogin">uconnect</a></li>
+              <li><a href="http://localhost:5000/pictures">Photos</a></li>
             </ul>
           </li>
-          <li><a href="#">Page 2</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
           <li><a href="http://localhost:5000/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
       </div>
